@@ -1,9 +1,7 @@
-name: Run Tests on Push to Master
+name: Run Tests on Push to Main
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
