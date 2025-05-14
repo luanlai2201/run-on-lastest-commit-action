@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -12,4 +16,4 @@ jobs:
 
     steps:
       - name: Echo test
-        run: echo "Running tests on master branch"
+        run: echo "Running tests on main branch"
