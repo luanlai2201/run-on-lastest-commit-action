@@ -1,3 +1,3 @@
 # run-on-lastest-commit-action
 
-Test 1
+Test 2
